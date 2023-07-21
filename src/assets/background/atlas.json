@@ -1,0 +1,63 @@
+{
+  "frames": {
+    "paluna.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 1350,
+        "h": 852
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1350,
+        "h": 852
+      },
+      "sourceSize": {
+        "w": 1350,
+        "h": 852
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Frame 2.png": {
+      "frame": {
+        "x": 1350,
+        "y": 0,
+        "w": 966,
+        "h": 530
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 966,
+        "h": 530
+      },
+      "sourceSize": {
+        "w": 967,
+        "h": 530
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "atlas.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1880,
+      "h": 966
+    },
+    "scale": 1
+  }
+}
