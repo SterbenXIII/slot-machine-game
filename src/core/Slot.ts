@@ -15,31 +15,33 @@ export default class Slot {
             app.loader.resources.atlas!.textures!['paluna 1.png'],
             app.loader.resources.atlas!.textures!['paluna 2.png'],
             app.loader.resources.atlas!.textures!['paluna 3.png'],
-            app.loader.resources.atlas!.textures!['paluna 4.png'],
-            app.loader.resources.atlas!.textures!['paluna 5.png'],
-            app.loader.resources.atlas!.textures!['paluna 6.png'],
-            app.loader.resources.atlas!.textures!['paluna 7.png'],
-            app.loader.resources.atlas!.textures!['paluna 8.png'],
-            app.loader.resources.atlas!.textures!['paluna 9.png'],
-            app.loader.resources.atlas!.textures!['paluna 10.png'],
-            app.loader.resources.atlas!.textures!['paluna 11.png'],
-            app.loader.resources.atlas!.textures!['paluna 12.png'],
-            app.loader.resources.atlas!.textures!['paluna 13.png'],
-            app.loader.resources.atlas!.textures!['paluna 14.png'],
-            app.loader.resources.atlas!.textures!['paluna 15.png'],
+            // app.loader.resources.atlas!.textures!['paluna 4.png'],
+            // app.loader.resources.atlas!.textures!['paluna 5.png'],
+            // app.loader.resources.atlas!.textures!['paluna 6.png'],
+            // app.loader.resources.atlas!.textures!['paluna 7.png'],
+            // app.loader.resources.atlas!.textures!['paluna 8.png'],
+            // app.loader.resources.atlas!.textures!['paluna 9.png'],
+            // app.loader.resources.atlas!.textures!['paluna 10.png'],
+            // app.loader.resources.atlas!.textures!['paluna 11.png'],
+            // app.loader.resources.atlas!.textures!['paluna 12.png'],
+            // app.loader.resources.atlas!.textures!['paluna 13.png'],
+            // app.loader.resources.atlas!.textures!['paluna 14.png'],
+            // app.loader.resources.atlas!.textures!['paluna 15.png'],
         ];
         this.generate(position);
     }
 
+
     private generate(position: number) {
-        const REEL_WIDTH = 300;
-        const REEL_OFFSET_BETWEEN = 10;
+        const REEL_WIDTH = 350;
+        const REEL_OFFSET_BETWEEN = 3;
         const NUMBER_OF_ROWS = 3;
         this.container.x = position * REEL_WIDTH;
 
         for (let i = 0; i < NUMBER_OF_ROWS + 1; i++) {
             const symbol = new PIXI.Sprite(this.textures[Math.floor(Math.random() * this.textures.length)]);
-            symbol.scale.set(0.8);
+            symbol.width = 300; // Set the desired width for the symbol
+            symbol.height = 250; // Set the desired height for the symbol
             const widthDiff = REEL_WIDTH - symbol.width;
             symbol.x = position * REEL_OFFSET_BETWEEN + widthDiff / 2;
             const yOffset = (this.appHeight - symbol.height * 3) / 3;

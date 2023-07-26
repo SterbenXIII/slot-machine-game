@@ -13,16 +13,17 @@ export default class Background {
     isFirstTexturePack: boolean = true,
     paddingTop: number = 0,
     paddingBottom: number = 100,
-    width: number = 2560,
-    height: number = 2000,
-    marginTop: number = 0,
+    width: number = 3200,
+    height: number = 600,
+    marginTop: number = 900,
     marginBottom: number = 200,
-    marginLeft: number = 430
+    marginLeft: number = 580
   ) {
     this.texture = isFirstTexturePack
       ? loader.resources!.atlass.textures![name]
       : loader.resources!.atlas.textures![name];
     this.sprite = new PIXI.Sprite(this.texture);
+
 
     if (isFullScreen) {
       // Calculate the scale to fit the screen while preserving the aspect ratio
